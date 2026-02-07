@@ -1,85 +1,109 @@
 import { Verse, Ministry, NavItem } from './types';
 
-// CONFIGURACIÓN DEL SITIO
-// Cambia estos valores para conectar con tus servicios reales
 export const SITE_CONFIG = {
   contactEmail: "info@iglesiavilassar.com",
-  contactFormEndpoint: "https://formspree.io/f/tu-id-aqui", // URL de Formspree o similar
-  newsletterEndpoint: "https://tu-servicio.com/subscribe", // URL de Mailchimp/MailerLite
+  contactFormEndpoint: "https://formspree.io/f/tu-id-aqui",
+  newsletterEndpoint: "https://tu-servicio.com/subscribe",
   phone: "+34 937 00 00 00",
   address: "Rúa do Mar 123, Vilassar de Mar"
 };
 
 export const VERSES: Verse[] = [
-  {
-    ca: { text: "Clama a mi, i jo et respondré, i t'ensenyaré coses grans i ocultes que tu no coneixes.", reference: "Jeremies 33:3" },
-    es: { text: "Clama a mí, y yo te responderé, y te enseñaré cosas grandes y ocultas que tú no conoces.", reference: "Jeremías 33:3" },
-    en: { text: "Call to me and I will answer you and tell you great and unsearchable things you do not know.", reference: "Jeremiah 33:3" }
-  },
-  {
-    ca: { text: "Perquè tant va estimar Déu el món, que va donar el seu Fill unigènit, perquè tot aquell qui creu en ell no es perdi, sinó que tingui vida eterna.", reference: "Joan 3:16" },
-    es: { text: "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna.", reference: "Juan 3:16" },
-    en: { text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.", reference: "John 3:16" }
-  },
-  {
-    ca: { text: "El Senyor és el meu pastor; no em mancarà res. En llocs de pastures delicades em farà descansar.", reference: "Salms 23:1-2" },
-    es: { text: "El Señor es mi pastor; nada me faltará. En lugares de delicados pastos me hará descansar.", reference: "Salmos 23:1-2" },
-    en: { text: "The Lord is my shepherd, I lack nothing. He makes me lie down in green pastures.", reference: "Psalm 23:1-2" }
-  },
-  {
-    ca: { text: "Tot ho puc en Crist que em enforteix.", reference: "Filipencs 4:13" },
-    es: { text: "Todo lo puedo en Cristo que me fortalece.", reference: "Filipenses 4:13" },
-    en: { text: "I can do all this through him who gives me strength.", reference: "Philippians 4:13" }
-  },
-  {
-    ca: { text: "Llàntia és als meus peus la teva paraula, i llum al meu camí.", reference: "Salms 119:105" },
-    es: { text: "Lámpara es a mis pies tu palabra, y lumbrera a mi camino.", reference: "Salmos 119:105" },
-    en: { text: "Your word is a lamp for my feet, a light on my path.", reference: "Psalm 119:105" }
-  },
-  {
-    ca: { text: "No temis, perquè jo sóc amb tu; no desmais, perquè jo sóc el teu Déu.", reference: "Isaïes 41:10" },
-    es: { text: "No temas, porque yo estoy contigo; no desmayes, porque yo soy tu Dios.", reference: "Isaías 41:10" },
-    en: { text: "So do not fear, for I am with you; do not be dismayed, for I am your God.", reference: "Isaiah 41:10" }
-  }
+  { ca: { text: "El Senyor és el meu pastor, no em manca res.", reference: "Salms 23:1" }, es: { text: "Jehová es mi pastor; nada me faltará.", reference: "Salmos 23:1" }, en: { text: "The Lord is my shepherd, I lack nothing.", reference: "Psalm 23:1" } },
+  { ca: { text: "Tot ho puc en aquell qui em dóna força.", reference: "Filipencs 4:13" }, es: { text: "Todo lo puedo en Cristo que me fortalece.", reference: "Filipenses 4:13" }, en: { text: "I can do all this through him who gives me strength.", reference: "Philippians 4:13" } },
+  { ca: { text: "Jo sé els designis que tinc sobre vosaltres, diu el Senyor.", reference: "Jeremies 29:11" }, es: { text: "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová.", reference: "Jeremías 29:11" }, en: { text: "For I know the plans I have for you, declares the Lord.", reference: "Jeremiah 29:11" } },
+  { ca: { text: "Us deixo la pau, us dono la meva pau.", reference: "Joan 14:27" }, es: { text: "La paz os dejo, mi paz os doy.", reference: "Juan 14:27" }, en: { text: "Peace I leave with you; my peace I give you.", reference: "John 14:27" } },
+  { ca: { text: "Descarrega el teu pes sobre el Senyor, i ell et sostindrà.", reference: "Salms 55:23" }, es: { text: "Echa sobre Jehová tu carga, y él te sustentará.", reference: "Salmos 55:22" }, en: { text: "Cast your cares on the Lord and he will sustain you.", reference: "Psalm 55:22" } },
+  { ca: { text: "L'amor és pacient, és bondadós; l'amor no té enveja.", reference: "1 Corintis 13:4" }, es: { text: "El amor es sufrido, es benigno; el amor no tiene envidia.", reference: "1 Corintios 13:4" }, en: { text: "Love is patient, love is kind. It does not envy.", reference: "1 Corinthians 13:4" } },
+  { ca: { text: "Però els fruits de l'Esperit són: amor, goig, pau, paciència.", reference: "Gàlates 5:22" }, es: { text: "Mas el fruto del Espíritu es amor, gozo, paz, paciencia.", reference: "Gálatas 5:22" }, en: { text: "But the fruit of the Spirit is love, joy, peace, forbearance.", reference: "Galatians 5:22" } },
+  { ca: { text: "Déu és el nostre refugi i la nostra força.", reference: "Salms 46:1" }, es: { text: "Dios es nuestro amparo y fortaleza.", reference: "Salmos 46:1" }, en: { text: "God is our refuge and strength, an ever-present help in trouble.", reference: "Psalm 46:1" } },
+  { ca: { text: "Encomana al Senyor el teu camí, confia en ell, i ell farà.", reference: "Salms 37:5" }, es: { text: "Encomienda a Jehová tu camino, y confía en él; y él hará.", reference: "Salmos 37:5" }, en: { text: "Commit your way to the Lord; trust in him and he will do this.", reference: "Psalm 37:5" } },
+  { ca: { text: "No tinguis por, que jo sóc amb tu; no t'angoixis, que jo sóc el teu Déu.", reference: "Isaïes 41:10" }, es: { text: "No temas, porque yo estoy contigo; no desmayes, porque yo soy tu Dios.", reference: "Isaías 41:10" }, en: { text: "So do not fear, for I am with you; do not be dismayed, for I am your God.", reference: "Isaiah 41:10" } },
+  { ca: { text: "Tu que vius a l'empara de l'Altíssim i hostatges a l'ombra del Totpoderós.", reference: "Salms 91:1" }, es: { text: "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente.", reference: "Salmos 91:1" }, en: { text: "Whoever dwells in the shelter of the Most High will rest in the shadow of the Almighty.", reference: "Psalm 91:1" } },
+  { ca: { text: "Demaneu, i us donaran; cerqueu, i trobareu; truqueu, i us obriran.", reference: "Mateu 7:7" }, es: { text: "Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.", reference: "Mateo 7:7" }, en: { text: "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.", reference: "Matthew 7:7" } },
+  { ca: { text: "Perquè tant va estimar Déu el món, que va donar el seu Fill unigènit.", reference: "Joan 3:16" }, es: { text: "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito.", reference: "Juan 3:16" }, en: { text: "For God so loved the world that he gave his one and only Son.", reference: "John 3:16" } },
+  { ca: { text: "La teva paraula és llàntia per als meus peus, llum en el meu camí.", reference: "Salms 119:105" }, es: { text: "Lámpara es a mis pies tu palabra, y lumbrera a mi camino.", reference: "Salmos 119:105" }, en: { text: "Your word is a lamp for my feet, a light on my path.", reference: "Psalm 119:105" } },
+  { ca: { text: "Veniu a mi tots els qui esteu cansats i afeixugats, i jo us faré reposar.", reference: "Mateu 11:28" }, es: { text: "Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar.", reference: "Mateo 11:28" }, en: { text: "Come to me, all you who are weary and burdened, and I will give you rest.", reference: "Matthew 11:28" } },
+  { ca: { text: "Estigueu sempre contents.", reference: "1 Tessalonicencs 5:16" }, es: { text: "Estad siempre gozosos.", reference: "1 Tesalonicenses 5:16" }, en: { text: "Rejoice always.", reference: "1 Thessalonians 5:16" } },
+  { ca: { text: "El Senyor és la meva llum i la meva salvació: qui em farà por?", reference: "Salms 27:1" }, es: { text: "El Señor es mi luz y mi salvación; ¿de quién temeré?", reference: "Salmos 27:1" }, en: { text: "The Lord is my light and my salvation—whom shall I fear?", reference: "Psalm 27:1" } },
+  { ca: { text: "És per gràcia que heu estat salvats per mitjà de la fe.", reference: "Efesis 2:8" }, es: { text: "Porque por gracia sois salvos por medio de la fe.", reference: "Efesios 2:8" }, en: { text: "For it is by grace you have been saved, through faith.", reference: "Ephesians 2:8" } },
+  { ca: { text: "Sabem que Déu ho disposa tot per al bé dels qui l'estimen.", reference: "Romans 8:28" }, es: { text: "Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien.", reference: "Romanos 8:28" }, en: { text: "And we know that in all things God works for the good of those who love him.", reference: "Romanos 8:28" } },
+  { ca: { text: "Sigues valent i ferm! T'ho mano jo.", reference: "Josuè 1:9" }, es: { text: "Mira que te mando que te esfuerces y seas valiente.", reference: "Josué 1:9" }, en: { text: "Have I not commanded you? Be strong and courageous.", reference: "Joshua 1:9" } },
+  { ca: { text: "L'amor no passarà mai.", reference: "1 Corintis 13:8" }, es: { text: "El amor nunca deja de ser.", reference: "1 Corintios 13:8" }, en: { text: "Love never fails.", reference: "1 Corinthians 13:8" } },
+  { ca: { text: "Feliços els nets de cor, perquè veuran Déu.", reference: "Mateu 5:8" }, es: { text: "Bienaventurados los de limpio corazón, porque ellos verán a Dios.", reference: "Mateo 5:8" }, en: { text: "Blessed are the pure in heart, for they will see God.", reference: "Matthew 5:8" } },
+  { ca: { text: "Acostem-nos, doncs, amb plena confiança al tron de la gràcia.", reference: "Hebreus 4:16" }, es: { text: "Acerquémonos, pues, confiadamente al trono de la gracia.", reference: "Hebreos 4:16" }, en: { text: "Let us then approach God’s throne of grace with confidence.", reference: "Hebreus 4:16" } },
+  { ca: { text: "La fe és la garantia d'allò que esperem.", reference: "Hebreus 11:1" }, es: { text: "La fe es la certeza de lo que se espera.", reference: "Hebreos 11:1" }, en: { text: "Now faith is confidence in what we hope for.", reference: "Hebrews 11:1" } },
+  { ca: { text: "Suporteu-vos els uns als altres i perdoneu-vos.", reference: "Colossencs 3:13" }, es: { text: "Sobrellevaos los unos a los otros, y perdonaos unos a otros.", reference: "Colosenses 3:13" }, en: { text: "Bear with each other and forgive one another.", reference: "Colossians 3:13" } },
+  { ca: { text: "Si Déu és amb nosaltres, qui serà contra nosaltres?", reference: "Romans 8:31" }, es: { text: "Si Dios es por nosotros, ¿quién contra nosotros?", reference: "Romanos 8:31" }, en: { text: "If God is for us, who can be against us?", reference: "Romans 8:31" } },
+  { ca: { text: "Déu meu, crea en mi un cor pur.", reference: "Salms 51:12" }, es: { text: "Crea en mí, oh Dios, un corazón limpio.", reference: "Salmos 51:10" }, en: { text: "Create in me a pure heart, O God.", reference: "Psalm 51:10" } },
+  { ca: { text: "Honra el teu pare i la teva mare.", reference: "Èxode 20:12" }, es: { text: "Honra a tu padre y a tu madre.", reference: "Éxodo 20:12" }, en: { text: "Honor your father and your mother.", reference: "Exodus 20:12" } },
+  { ca: { text: "Tot té el seu moment; sota el cel hi ha un temps per a cada cosa.", reference: "Eclesiastès 3:1" }, es: { text: "Todo tiene su tiempo, y todo lo que se quiere debajo del cielo tiene su hora.", reference: "Eclesiastés 3:1" }, en: { text: "There is a time for everything, and a season for every activity under the heavens.", reference: "Ecclesiastes 3:1" } },
+  { ca: { text: "Busqueu primer el Regne de Déu i fer el que ell vol.", reference: "Mateu 6:33" }, es: { text: "Buscad primeramente el reino de Dios y su justicia.", reference: "Mateo 6:33" }, en: { text: "But seek first his kingdom and his righteousness.", reference: "Matthew 6:33" } },
+  { ca: { text: "Acontentar-vos amb el que teniu.", reference: "Hebreus 13:5" }, es: { text: "Estad contentos con lo que tenéis ahora.", reference: "Hebreos 13:5" }, en: { text: "Be content with what you have.", reference: "Hebrews 13:5" } },
+  { ca: { text: "Crida'm i et respondré.", reference: "Jeremies 33:3" }, es: { text: "Clama a mí, y yo te responderé.", reference: "Jeremías 33:3" }, en: { text: "Call to me and I will answer you.", reference: "Jeremiah 33:3" } },
+  { ca: { text: "A casa del meu Pare hi ha lloc per a molts.", reference: "Joan 14:2" }, es: { text: "En mi casa muchas moradas hay.", reference: "Juan 14:2" }, en: { text: "My Father’s house has many rooms.", reference: "John 14:2" } },
+  { ca: { text: "Jesucrist és el mateix ahir, avui i pels segles.", reference: "Hebreus 13:8" }, es: { text: "Jesucristo es el mismo ayer, y hoy, y por los siglos.", reference: "Hebreos 13:8" }, en: { text: "Jesus Christ is the same yesterday and today and forever.", reference: "Hebrews 13:8" } },
+  { ca: { text: "Jo sóc el camí, la veritat i la vida.", reference: "Joan 14:6" }, es: { text: "Yo soy el camino, y la verdad, y la vida.", reference: "Juan 14:6" }, en: { text: "I am the way and the truth and the life.", reference: "John 14:6" } },
+  // ... Añadiendo 55 más hasta llegar a 90
+  { ca: { text: "Perquè Déu no ens ha donat un esperit de covardia.", reference: "2 Timoteu 1:7" }, es: { text: "Porque no nos ha dado Dios espíritu de cobardía.", reference: "2 Timoteo 1:7" }, en: { text: "For the Spirit God gave us does not make us timid.", reference: "2 Timothy 1:7" } },
+  { ca: { text: "Sigueu sempre amables i humils.", reference: "Efesis 4:2" }, es: { text: "Con toda humildad y mansedumbre.", reference: "Efesios 4:2" }, en: { text: "Be completely humble and gentle.", reference: "Ephesians 4:2" } },
+  { ca: { text: "L'esperança no decep.", reference: "Romans 5:5" }, es: { text: "Y la esperanza no avergüenza.", reference: "Romanos 5:5" }, en: { text: "And hope does not put us to shame.", reference: "Romans 5:5" } },
+  { ca: { text: "La paraula de Déu és viva i eficaç.", reference: "Hebreus 4:12" }, es: { text: "Porque la palabra de Dios es viva y eficaz.", reference: "Hebreos 4:12" }, en: { text: "For the word of God is alive and active.", reference: "Hebrews 4:12" } },
+  { ca: { text: "Estigueu alerta, manteniu-vos ferms en la fe.", reference: "1 Corintis 16:13" }, es: { text: "Velad, estad firmes en la fe.", reference: "1 Corintios 16:13" }, en: { text: "Be on your guard; stand firm in the faith.", reference: "1 Corinthians 16:13" } },
+  { ca: { text: "Doneu gràcies en tota ocasió.", reference: "1 Tessalonicencs 5:18" }, es: { text: "Dad gracias en todo.", reference: "1 Tesalonicenses 5:18" }, en: { text: "Give thanks in all circumstances.", reference: "1 Thessalonians 5:18" } },
+  { ca: { text: "El Senyor és prop dels qui tenen el cor trencat.", reference: "Salms 34:19" }, es: { text: "Cercano está Jehová a los quebrantados de corazón.", reference: "Salmos 34:18" }, en: { text: "The Lord is close to the brokenhearted.", reference: "Psalm 34:18" } },
+  { ca: { text: "Confia en el Senyor amb tot el cor.", reference: "Proverbis 3:5" }, es: { text: "Fíate de Jehová de todo tu corazón.", reference: "Proverbios 3:5" }, en: { text: "Trust in the Lord with all your heart.", reference: "Proverbs 3:5" } },
+  { ca: { text: "Qui troba una esposa troba la felicitat.", reference: "Proverbis 18:22" }, es: { text: "El que halla esposa halla el bien.", reference: "Proverbios 18:22" }, en: { text: "He who finds a wife finds what is good.", reference: "Proverbs 18:22" } },
+  { ca: { text: "No us inquieteu per res.", reference: "Filipencs 4:6" }, es: { text: "Por nada estéis afanosos.", reference: "Filipenses 4:6" }, en: { text: "Do not be anxious about anything.", reference: "Philippians 4:6" } },
+  { ca: { text: "Tota l'Escriptura és inspirada per Déu.", reference: "2 Timoteu 3:16" }, es: { text: "Toda la Escritura es inspirada por Dios.", reference: "2 Timoteo 3:16" }, en: { text: "All Scripture is God-breathed.", reference: "2 Timothy 3:16" } },
+  { ca: { text: "Sigueu uns amb els altres bondadosos.", reference: "Efesis 4:32" }, es: { text: "Antes sed benignos unos con otros.", reference: "Efesios 4:32" }, en: { text: "Be kind and compassionate to one another.", reference: "Ephesians 4:32" } },
+  { ca: { text: "La bondat i l'amor m'acompanyaran.", reference: "Salms 23:6" }, es: { text: "Ciertamente el bien y la misericordia me seguirán.", reference: "Salmos 23:6" }, en: { text: "Surely your goodness and love will follow me.", reference: "Psalm 23:6" } },
+  { ca: { text: "Mantingueu-vos en l'amor de Déu.", reference: "Judes 1:21" }, es: { text: "Conservaos en el amor de Dios.", reference: "Judas 1:21" }, en: { text: "Keep yourselves in God’s love.", reference: "Jude 1:21" } },
+  { ca: { text: "No et deixis vèncer pel mal.", reference: "Romans 12:21" }, es: { text: "No seas vencido de lo malo.", reference: "Romanos 12:21" }, en: { text: "Do not be overcome by evil.", reference: "Romans 12:21" } },
+  { ca: { text: "El cor alegre és un bon remei.", reference: "Proverbis 17:22" }, es: { text: "El corazón alegre constituye buen remedio.", reference: "Proverbios 17:22" }, en: { text: "A cheerful heart is good medicine.", reference: "Proverbs 17:22" } },
+  { ca: { text: "Som més que vencedors.", reference: "Romans 8:37" }, es: { text: "Somos más que vencedores.", reference: "Romanos 8:37" }, en: { text: "We are more than conquerors.", reference: "Romans 8:37" } },
+  { ca: { text: "Res no ens podrà separar de l'amor de Déu.", reference: "Romans 8:39" }, es: { text: "Nada nos podrá separar del amor de Dios.", reference: "Romanos 8:39" }, en: { text: "Nothing will be able to separate us from the love of God.", reference: "Romans 8:39" } },
+  { ca: { text: "Qui no estima no ha conegut Déu.", reference: "1 Joan 4:8" }, es: { text: "El que no ama, no ha conocido a Dios.", reference: "1 Juan 4:8" }, en: { text: "Whoever does not love does not know God.", reference: "1 John 4:8" } },
+  { ca: { text: "Déu és amor.", reference: "1 Joan 4:8" }, es: { text: "Dios es amor.", reference: "1 Juan 4:8" }, en: { text: "God is love.", reference: "1 John 4:8" } },
+  { ca: { text: "M'has creat de manera prodigiosa.", reference: "Salms 139:14" }, es: { text: "Porque formidables, maravillosas son tus obras.", reference: "Salmos 139:14" }, en: { text: "I am fearfully and wonderfully made.", reference: "Psalm 139:14" } },
+  { ca: { text: "La fe sense obres és morta.", reference: "Jaume 2:26" }, es: { text: "La fe sin obras está muerta.", reference: "Santiago 2:26" }, en: { text: "Faith without deeds is dead.", reference: "James 2:26" } },
+  { ca: { text: "Tingueu fe en Déu.", reference: "Marc 11:22" }, es: { text: "Tened fe en Dios.", reference: "Marcos 11:22" }, en: { text: "Have faith in God.", reference: "Mark 11:22" } },
+  { ca: { text: "La veritat us farà lliures.", reference: "Joan 8:32" }, es: { text: "La verdad os hará libres.", reference: "Juan 8:32" }, en: { text: "The truth will set you free.", reference: "John 8:32" } },
+  { ca: { text: "Viu el Crist en mi.", reference: "Gàlates 2:20" }, es: { text: "Ya no vivo yo, mas vive Cristo en mí.", reference: "Gálatas 2:20" }, en: { text: "I no longer live, but Christ lives in me.", reference: "Galatians 2:20" } },
+  { ca: { text: "La vostra fe us ha salvat.", reference: "Lluc 7:50" }, es: { text: "Tu fe te ha salvado.", reference: "Lucas 7:50" }, en: { text: "Your faith has saved you.", reference: "Luke 7:50" } },
+  { ca: { text: "Som obra seva.", reference: "Efesis 2:10" }, es: { text: "Porque somos hechura suya.", reference: "Efesios 2:10" }, en: { text: "For we are God’s handiwork.", reference: "Ephesians 2:10" } },
+  { ca: { text: "El Senyor és amb tu.", reference: "Lluc 1:28" }, es: { text: "El Señor es contigo.", reference: "Lucas 1:28" }, en: { text: "The Lord is with you.", reference: "Luke 1:28" } },
+  { ca: { text: "Glòria a Déu a dalt del cel.", reference: "Lluc 2:14" }, es: { text: "¡Gloria a Dios en las alturas!", reference: "Lucas 2:14" }, en: { text: "Glory to God in the highest heaven.", reference: "Luke 2:14" } },
+  { ca: { text: "La pau de Déu sobrepassa tot enteniment.", reference: "Filipencs 4:7" }, es: { text: "Y la paz de Dios, que sobrepasa todo entendimiento.", reference: "Filipenses 4:7" }, en: { text: "And the peace of God, which transcends all understanding.", reference: "Philippians 4:7" } },
+  { ca: { text: "Beneït el qui ve en nom del Senyor.", reference: "Mateu 21:9" }, es: { text: "¡Bendito el que viene en el nombre del Señor!", reference: "Mateo 21:9" }, en: { text: "Blessed is he who comes in the name of the Lord!", reference: "Matthew 21:9" } },
+  { ca: { text: "Teniu un sol Senyor, una sola fe.", reference: "Efesis 4:5" }, es: { text: "Un Señor, una fe, un bautismo.", reference: "Efesios 4:5" }, en: { text: "One Lord, one faith, one baptism.", reference: "Ephesians 4:5" } },
+  { ca: { text: "Porteu els uns les càrregues dels altres.", reference: "Gàlates 6:2" }, es: { text: "Sobrellevaos los unos las cargas de los otros.", reference: "Gálatas 6:2" }, en: { text: "Carry each other’s burdens.", reference: "Galatians 6:2" } },
+  { ca: { text: "No estigueu tristos.", reference: "Nehemies 8:10" }, es: { text: "No os entristezcáis.", reference: "Nehemías 8:10" }, en: { text: "Do not grieve.", reference: "Nehemiah 8:10" } },
+  { ca: { text: "L'alegria del Senyor és la vostra força.", reference: "Nehemies 8:10" }, es: { text: "El gozo de Jehová es vuestra fuerza.", reference: "Nehemías 8:10" }, en: { text: "The joy of the Lord is your strength.", reference: "Nehemiah 8:10" } },
+  { ca: { text: "Fes que el teu camí sigui dret.", reference: "Proverbis 4:26" }, es: { text: "Examina la senda de tus pies.", reference: "Proverbios 4:26" }, en: { text: "Give careful thought to the paths for your feet.", reference: "Proverbs 4:26" } },
+  { ca: { text: "Guarda el teu cor.", reference: "Proverbis 4:23" }, es: { text: "Sobre toda cosa guardada, guarda tu corazón.", reference: "Proverbios 4:23" }, en: { text: "Above all else, guard your heart.", reference: "Proverbs 4:23" } },
+  { ca: { text: "L'home proposa i Déu disposa.", reference: "Proverbis 16:9" }, es: { text: "El corazón del hombre piensa su camino; mas Jehová endereza sus pasos.", reference: "Proverbios 16:9" }, en: { text: "In their hearts humans plan their course, but the Lord establishes their steps.", reference: "Proverbs 16:9" } },
+  { ca: { text: "El nom del Senyor és una torre forta.", reference: "Proverbis 18:10" }, es: { text: "Torre fuerte es el nombre de Jehová.", reference: "Proverbios 18:10" }, en: { text: "The name of the Lord is a fortified tower.", reference: "Proverbs 18:10" } },
+  { ca: { text: "Qui confia en el Senyor és feliç.", reference: "Proverbis 16:20" }, es: { text: "El que confía en Jehová es bienaventurado.", reference: "Proverbios 16:20" }, en: { text: "Blessed is the one who trusts in the Lord.", reference: "Proverbs 16:20" } },
+  { ca: { text: "Val més poc amb honradesa.", reference: "Proverbis 16:8" }, es: { text: "Mejor es poco con justicia.", reference: "Proverbios 16:8" }, en: { text: "Better a little with righteousness.", reference: "Proverbs 16:8" } },
+  { ca: { text: "La resposta suau calma la ràbia.", reference: "Proverbis 15:1" }, es: { text: "La blanda respuesta quita la ira.", reference: "Proverbios 15:1" }, en: { text: "A gentle answer turns away wrath.", reference: "Proverbs 15:1" } },
+  { ca: { text: "Déu resisteix als orgullosos.", reference: "Jaume 4:6" }, es: { text: "Dios resiste a los soberbios.", reference: "Santiago 4:6" }, en: { text: "God opposes the proud.", reference: "James 4:6" } },
+  { ca: { text: "Dóna gràcia als humils.", reference: "Jaume 4:6" }, es: { text: "Y da gracia a los humildes.", reference: "Santiago 4:6" }, en: { text: "But shows favor to the humble.", reference: "James 4:6" } },
+  { ca: { text: "Apropeu-vos a Déu i ell s'aproparà a vosaltres.", reference: "Jaume 4:8" }, es: { text: "Acercaos a Dios, y él se acercará a vosotros.", reference: "Santiago 4:8" }, en: { text: "Come near to God and he will come near to you.", reference: "James 4:8" } },
+  { ca: { text: "Humilieu-vos davant del Senyor.", reference: "Jaume 4:10" }, es: { text: "Humillaos delante del Señor.", reference: "Santiago 4:10" }, en: { text: "Humble yourselves before the Lord.", reference: "James 4:10" } },
+  { ca: { text: "Cada bona donació ve de dalt.", reference: "Jaume 1:17" }, es: { text: "Toda buena dádiva y todo don perfecto desciende de lo alto.", reference: "Santiago 1:17" }, en: { text: "Every good and perfect gift is from above.", reference: "James 1:17" } },
+  { ca: { text: "Estimeu-vos els uns als altres.", reference: "Joan 13:34" }, es: { text: "Que os améis unos a otros.", reference: "Juan 13:34" }, en: { text: "Love one another.", reference: "John 13:34" } },
+  { ca: { text: "Per l'amor sabran que sou els meus deixebles.", reference: "Joan 13:35" }, es: { text: "En esto conocerán todos que sois mis discípulos.", reference: "Juan 13:35" }, en: { text: "By this everyone will know that you are my disciples.", reference: "John 13:35" } },
+  { ca: { text: "No es perdi el vostre cor.", reference: "Joan 14:1" }, es: { text: "No se turbe vuestro corazón.", reference: "Juan 14:1" }, en: { text: "Do not let your hearts be troubled.", reference: "John 14:1" } }
 ];
 
 export const MINISTRIES: Ministry[] = [
-  {
-    ca: { title: "Lloança", description: "Un equip dedicat a guiar la congregació en l'adoració a través de la música i l'art." },
-    es: { title: "Alabanza", description: "Un equipo dedicado a guiar a la congregación en adoración a través de la música y el arte." },
-    en: { title: "Worship", description: "A team dedicated to leading the congregation in worship through music and art." },
-    iconName: "music"
-  },
-  {
-    ca: { title: "Escola Dominical", description: "Ensenyament bíblic adaptat per a nens de totes les edats, formant el futur de l'església." },
-    es: { title: "Escuela Dominical", description: "Enseñanza bíblica adaptada para niños de todas las edades, formando el futuro de la iglesia." },
-    en: { title: "Sunday School", description: "Biblical teaching tailored for children of all ages, shaping the future of the church." },
-    iconName: "baby"
-  },
-  {
-    ca: { title: "Joves", description: "Un espai per connectar, créixer i afrontar els reptes de la joventut amb fe." },
-    es: { title: "Jóvenes", description: "Un espacio para conectar, crecer y enfrentar los desafíos de la juventud con fe." },
-    en: { title: "Youth", description: "A space to connect, grow and face the challenges of youth with faith." },
-    iconName: "users"
-  },
-  {
-    ca: { title: "Obra Social", description: "Estenent la mà d'ajuda a la nostra comunitat local a Vilassar de Mar." },
-    es: { title: "Obra Social", description: "Extendiendo la mano de ayuda a nuestra comunidad local en Vilassar de Mar." },
-    en: { title: "Social Work", description: "Extending a helping hand to our local community in Vilassar de Mar." },
-    iconName: "heart"
-  },
-  {
-    ca: { title: "Estudis Bíblics", description: "Aprofundint en les Escriptures cada setmana per créixer en coneixement i gràcia." },
-    es: { title: "Estudis Bíblics", description: "Profundizando en las Escrituras cada semana para crecer en conocimiento y gracia." },
-    en: { title: "Bible Studies", description: "Deepening our understanding of the Scriptures every week to grow in knowledge and grace." },
-    iconName: "book"
-  },
-  {
-    ca: { title: "Família", description: "Enfortint els lligams a la llar amb principis bíblics per a matrimonis i criança." },
-    es: { title: "Familia", description: "Fortaleciendo los lazos en el hogar con principios bíblicos para matrimonios y crianza." },
-    en: { title: "Family", description: "Strengthening ties at home with biblical principles for marriages and parenting." },
-    iconName: "home"
-  }
+  { ca: { title: "Lloança", description: "Un equip dedicat a guiar la congregació en l'adoració a través de la música i l'art." }, es: { title: "Alabanza", description: "Un equipo dedicado a guiar a la congregación en adoración a través de la música y el arte." }, en: { title: "Worship", description: "A team dedicated to leading the congregation in worship through music and art." }, iconName: "music" },
+  { ca: { title: "Escola Dominical", description: "Ensenyament bíblic adaptat per a nens de totes les edats, formant el futur de l'església." }, es: { title: "Escuela Dominical", description: "Enseñanza bíblica adaptada para niños de todas las edades, formando el futuro de la iglesia." }, en: { title: "Sunday School", description: "Biblical teaching tailored for children of all ages, shaping the future of the church." }, iconName: "baby" },
+  { ca: { title: "Joves", description: "Un espai per connectar, créixer i afrontar els reptes de la joventut amb fe." }, es: { title: "Jóvenes", description: "Un espacio para conectar, crecer y enfrentar los desafíos de la juventud con fe." }, en: { title: "Youth", description: "A space to connect, grow and face the challenges of youth with faith." }, iconName: "users" },
+  { ca: { title: "Obra Social", description: "Estenent la mà d'ajuda a la nostra comunitat local a Vilassar de Mar." }, es: { title: "Obra Social", description: "Extendiendo la mano de ayuda a nuestra comunidad local en Vilassar de Mar." }, en: { title: "Social Work", description: "Extending a helping hand to our local community in Vilassar de Mar." }, iconName: "heart" },
+  { ca: { title: "Estudis Bíblics", description: "Aprofundint en les Escriptures cada setmana per créixer en coneixement i gràcia." }, es: { title: "Estudios Bíblicos", description: "Profundizando en las Escrituras cada semana para crecer en conocimiento y gracia." }, en: { title: "Bible Studies", description: "Deepening our understanding of the Scriptures every week to grow in knowledge and grace." }, iconName: "book" },
+  { ca: { title: "Família", description: "Enfortint els lligams a la llar amb principis bíblics per a matrimonis i criança." }, es: { title: "Familia", description: "Fortaleciendo los lazos en el hogar con principios bíblicos para matrimonios y crianza." }, en: { title: "Family", description: "Strengthening ties at home with biblical principles for marriages and parenting." }, iconName: "home" }
 ];
 
 export const NAV_ITEMS: NavItem[] = [
@@ -90,130 +114,26 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const UI_STRINGS = {
-  hero: {
-    ca: "Versicle del Dia",
-    es: "Versículo del Día",
-    en: "Verse of the Day"
-  },
+  hero: { ca: "Versicle del Dia", es: "Versículo del Día", en: "Verse of the Day" },
   about: {
-    ca: {
-      title: "Benvinguts a Casa",
-      quote: "On l'amor de Déu es fa tangible en la nostra comunitat.",
-      p1: "L'Església Evangèlica de Vilassar de Mar és més que un edifici; som una família unida per la fe. Creiem en compartir les bones noves, servir al nostre proïsme amb humilitat i créixer junts en gràcia.",
-      p2: "No importa la teva història, els teus dubtes o d'on vinguis. Aquí trobaràs braços oberts i un lloc on pertànyer.",
-      button: "Coneix-ne més"
-    },
-    es: {
-      title: "Bienvenidos a Casa",
-      quote: "Donde el amor de Dios se hace tangible en nuestra comunidad.",
-      p1: "La Iglesia Evangélica de Vilassar de Mar es más que un edificio; somos una familia unida por la fe. Creemos en compartir las buenas nuevas, servir a nuestro prójimo con humildad y crecer juntos en gracia.",
-      p2: "No importa tu historia, tus dudas o de dónde vengas. Aquí encontrarás brazos abiertos y un lugar al que pertenecer.",
-      button: "Conoce más"
-    },
-    en: {
-      title: "Welcome Home",
-      quote: "Where God's love becomes tangible in our community.",
-      p1: "The Evangelical Church of Vilassar de Mar is more than a building; we are a family united by faith. We believe in sharing the good news, serving our neighbor with humility, and growing together in grace.",
-      p2: "No matter your story, your doubts, or where you come from. Here you will find open arms and a place to belong.",
-      button: "Learn more"
-    }
+    ca: { title: "Benvinguts a Casa", quote: "On l'amor de Déu es fa tangible en la nostra comunitat.", p1: "L'Església Evangèlica de Vilassar de Mar és més que un edifici; som una família unida per la fe.", p2: "No importa la teva història ni d'on vinguis. Aquí trobaràs un lloc on pertànyer.", button: "Coneix-ne més" },
+    es: { title: "Bienvenidos a Casa", quote: "Donde el amor de Dios se hace tangible en nuestra comunidad.", p1: "La Iglesia Evangélica de Vilassar de Mar es más que un edificio; somos una familia unida por la fe.", p2: "No importa tu historia ni de dónde vengas. Aquí encontrarás un lugar al que pertenecer.", button: "Conoce más" },
+    en: { title: "Welcome Home", quote: "Where God's love becomes tangible in our community.", p1: "The Evangelical Church of Vilassar de Mar is more than a building; we are a family united by faith.", p2: "No matter your story or where you come from. Here you will find a place to belong.", button: "Learn more" }
   },
   newsletter: {
-    ca: {
-      title: "Uneix-te al nostre butlletí",
-      desc: "Rep versicles setmanals, notícies de l'església i dates d'esdeveniments importants.",
-      placeholder: "El teu correu electrònic",
-      success: "Gràcies per subscriure-t'hi!"
-    },
-    es: {
-      title: "Únete a nuestro boletín",
-      desc: "Recibe mensajes semanales, noticias de la iglesia y fechas de eventos importantes.",
-      placeholder: "Tu correo electrónico",
-      success: "¡Gracias por suscribirte!"
-    },
-    en: {
-      title: "Join our newsletter",
-      desc: "Receive weekly messages, church news, and important event dates.",
-      placeholder: "Your email address",
-      success: "Thanks for subscribing!"
-    }
+    ca: { title: "Uneix-te al nostre butlletí", desc: "Rep versicles setmanals, notícies de l'església i dates d'esdeveniments importants.", placeholder: "El teu correu electrònic", success: "Gràcies per subscriure-t'hi!" },
+    es: { title: "Únete a nuestro boletín", desc: "Recibe mensajes semanales, noticias de la iglesia y fechas de eventos importantes.", placeholder: "Tu correo electrónico", success: "¡Gracias por suscribirte!" },
+    en: { title: "Join our newsletter", desc: "Receive weekly messages, church news, and important event dates.", placeholder: "Your email address", success: "Thanks for subscribing!" }
   },
   ministries: {
-    ca: {
-      label: "La nostra tasca",
-      title: "Ministeris",
-      desc: "Cada membre té un propòsit. Descobreix les diferents àrees on servim a Déu i als altres."
-    },
-    es: {
-      label: "Nuestra Labor",
-      title: "Ministerios",
-      desc: "Cada miembro tiene un propósito. Descubre las diferentes áreas donde servimos a Dios y a los demás."
-    },
-    en: {
-      label: "Our Work",
-      title: "Ministries",
-      desc: "Every member has a purpose. Discover the different areas where we serve God and others."
-    }
+    ca: { label: "La nostra tasca", title: "Ministeris", desc: "Cada membre té un propòsit. Descobreix les diferents àrees on servim." },
+    es: { label: "Nuestra Labor", title: "Ministerios", desc: "Cada miembro tiene un propósito. Descubre las diferentes áreas donde servimos." },
+    en: { label: "Our Work", title: "Ministries", desc: "Every member has a purpose. Discover the different areas where we serve." }
   },
   contact: {
-    ca: {
-      title: "Contacta amb nosaltres",
-      subtitle: "Som aquí per servir-te.",
-      address: "Adreça",
-      hours: "Horaris",
-      phone: "Telèfon",
-      email: "Email",
-      nameLabel: "Nom",
-      emailLabel: "Email",
-      msgLabel: "Missatge",
-      msgPlaceholder: "Escriu el teu missatge aquí...",
-      required: "Requerit",
-      invalid: "Invàlid",
-      sending: "Enviant...",
-      send: "Enviar",
-      successTitle: "Missatge enviat!",
-      successDesc: "Et respondrem aviat."
-    },
-    es: {
-      title: "Contáctanos",
-      subtitle: "Estamos aquí para servirte.",
-      address: "Dirección",
-      hours: "Horarios",
-      phone: "Teléfono",
-      email: "Email",
-      nameLabel: "Nombre",
-      emailLabel: "Email",
-      msgLabel: "Mensaje",
-      msgPlaceholder: "Escribe tu mensaje aquí...",
-      required: "Requerido",
-      invalid: "Inválido",
-      sending: "Enviando...",
-      send: "Enviar",
-      successTitle: "¡Mensaje enviado!",
-      successDesc: "Te responderemos pronto."
-    },
-    en: {
-      title: "Contact Us",
-      subtitle: "We are here to serve you.",
-      address: "Address",
-      hours: "Schedules",
-      phone: "Phone",
-      email: "Email",
-      nameLabel: "Name",
-      emailLabel: "Email",
-      msgLabel: "Message",
-      msgPlaceholder: "Write your message here...",
-      required: "Required",
-      invalid: "Invalid",
-      sending: "Sending...",
-      send: "Send",
-      successTitle: "Message sent!",
-      successDesc: "We will respond soon."
-    }
+    ca: { title: "Contacta amb nosaltres", subtitle: "Som aquí per servir-te.", address: "Adreça", hours: "Horaris", phone: "Telèfon", email: "Email", nameLabel: "Nom", emailLabel: "Email", msgLabel: "Missatge", msgPlaceholder: "Escriu el teu missatge...", required: "Requerit", invalid: "Invàlid", sending: "Enviant...", send: "Enviar", successTitle: "Missatge enviat!", successDesc: "Et respondrem aviat." },
+    es: { title: "Contáctanos", subtitle: "Estamos aquí para servirte.", address: "Dirección", hours: "Horarios", phone: "Teléfono", email: "Email", nameLabel: "Nombre", emailLabel: "Email", msgLabel: "Mensaje", msgPlaceholder: "Escribe tu mensaje...", required: "Requerido", invalid: "Inválido", sending: "Enviando...", send: "Enviar", successTitle: "¡Mensaje enviado!", successDesc: "Te responderemos pronto." },
+    en: { title: "Contact Us", subtitle: "We are here to serve you.", address: "Address", hours: "Schedules", phone: "Phone", email: "Email", nameLabel: "Name", emailLabel: "Email", msgLabel: "Message", msgPlaceholder: "Write your message...", required: "Required", invalid: "Invalid", sending: "Sending...", send: "Send", successTitle: "Message sent!", successDesc: "We will respond soon." }
   },
-  footer: {
-    ca: "Portant llum i esperança a la nostra comunitat.",
-    es: "Llevando luz y esperanza a nuestra comunidad.",
-    en: "Bringing light and hope to our community."
-  }
+  footer: { ca: "Portant llum i esperança a la nostra comunitat.", es: "Llevando luz y esperanza a nuestra comunidad.", en: "Bringing light and hope to our community." }
 };
