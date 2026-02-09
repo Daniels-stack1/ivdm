@@ -95,7 +95,11 @@ const ContactSection: React.FC = () => {
               <div>
                 <h4 className="font-bold text-xs uppercase tracking-[0.2em] mb-2 font-sans text-gold">{t.hours}</h4>
                 <p className="text-cream/90 text-lg font-serif italic">
-                  {language === 'en' ? 'Sun: 11:00 AM | Thu: 8:00 PM' : 'Dom: 11:00 AM | Jue: 20:00 PM'}
+                  {language === 'en' 
+                    ? 'Sun: 11:00 AM | Thu: 6:30 PM' 
+                    : language === 'ca'
+                      ? 'Dg: 11:00 AM | Dj: 18:30 PM' 
+                      : 'Dom: 11:00 AM | Jue: 18:30 PM'}
                 </p>
               </div>
             </div>

@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   contactFormEndpoint: "https://formspree.io/f/tu-id-aqui",
   newsletterEndpoint: "https://tu-servicio.com/subscribe",
   phone: "+34 937 00 00 00",
-  address: "Rúa do Mar 123, Vilassar de Mar"
+  address: "Carrer de l'Àngel 8, Vilassar de Mar"
 };
 
 export const VERSES: Verse[] = [
@@ -44,7 +44,6 @@ export const VERSES: Verse[] = [
   { ca: { text: "A casa del meu Pare hi ha lloc per a molts.", reference: "Joan 14:2" }, es: { text: "En mi casa muchas moradas hay.", reference: "Juan 14:2" }, en: { text: "My Father’s house has many rooms.", reference: "John 14:2" } },
   { ca: { text: "Jesucrist és el mateix ahir, avui i pels segles.", reference: "Hebreus 13:8" }, es: { text: "Jesucristo es el mismo ayer, y hoy, y por los siglos.", reference: "Hebreos 13:8" }, en: { text: "Jesus Christ is the same yesterday and today and forever.", reference: "Hebrews 13:8" } },
   { ca: { text: "Jo sóc el camí, la veritat i la vida.", reference: "Joan 14:6" }, es: { text: "Yo soy el camino, y la verdad, y la vida.", reference: "Juan 14:6" }, en: { text: "I am the way and the truth and the life.", reference: "John 14:6" } },
-  // ... Añadiendo 55 más hasta llegar a 90
   { ca: { text: "Perquè Déu no ens ha donat un esperit de covardia.", reference: "2 Timoteu 1:7" }, es: { text: "Porque no nos ha dado Dios espíritu de cobardía.", reference: "2 Timoteo 1:7" }, en: { text: "For the Spirit God gave us does not make us timid.", reference: "2 Timothy 1:7" } },
   { ca: { text: "Sigueu sempre amables i humils.", reference: "Efesis 4:2" }, es: { text: "Con toda humildad y mansedumbre.", reference: "Efesios 4:2" }, en: { text: "Be completely humble and gentle.", reference: "Ephesians 4:2" } },
   { ca: { text: "L'esperança no decep.", reference: "Romans 5:5" }, es: { text: "Y la esperanza no avergüenza.", reference: "Romanos 5:5" }, en: { text: "And hope does not put us to shame.", reference: "Romans 5:5" } },
