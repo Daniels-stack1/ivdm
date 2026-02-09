@@ -99,7 +99,7 @@ const ContactSection: React.FC = () => {
                     ? 'Sun: 11:00 AM | Thu: 6:30 PM' 
                     : language === 'ca'
                       ? 'Dg: 11:00 AM | Dj: 18:30 PM' 
-                      : 'Dom: 11:00 AM | Jue: 18:30 PM'}
+                      : 'Dom: 11:00 AM | Mie: 18:30 PM'}
                 </p>
               </div>
             </div>
